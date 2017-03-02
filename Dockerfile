@@ -3,6 +3,7 @@ FROM alpine:edge
 RUN set -x \
  && apk add --no-cache \
     docker \
+    python2 \
  && apk add --no-cache --virtual build-deps \
     make \
     py-pip \
