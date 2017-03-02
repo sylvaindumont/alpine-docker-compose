@@ -6,8 +6,8 @@ RUN set -x \
     docker \
  && apk add --no-cache --virtual build-deps \
     make \
-    py-pip
+    py-pip \
  && pip install --trusted-host pypi.python.org \
     docker-compose \
  && rm -r ~/.cache/pip \
- && apk del build-deps \
+ && apk del build-deps
