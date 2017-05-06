@@ -1,8 +1,7 @@
-FROM alpine:edge
+FROM docker:latest
 
 RUN set -x \
  && apk add --no-cache \
-    docker \
     python2 \
  && apk add --no-cache --virtual build-deps \
     make \
