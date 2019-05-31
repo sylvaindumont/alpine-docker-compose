@@ -5,6 +5,7 @@ RUN set -x \
     python2 \
     bash \
     curl \
+    git \
  && apk add --no-cache --virtual build-deps \
     make \
     py-pip \
