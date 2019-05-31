@@ -7,7 +7,11 @@ RUN set -x \
     curl \
     git \
  && apk add --no-cache --virtual build-deps \
+    python-dev \
+    libffi-dev \
+    openssl-dev \
     gcc \
+    libc-dev \
     make \
     py-pip \
     wget \
