@@ -7,6 +7,7 @@ RUN set -x \
     curl \
     git \
  && apk add --no-cache --virtual build-deps \
+    gcc \
     make \
     py-pip \
     wget \
