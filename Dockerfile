@@ -1,23 +1,20 @@
 FROM docker:latest
 
 RUN set -x \
- && apk add --no-cache \
-    python2 \
-    bash \
-    curl \
-    git \
- && apk add --no-cache --virtual build-deps \
-    python-dev \
-    libffi-dev \
-    openssl-dev \
-    gcc \
-    libc-dev \
-    make \
-    py-pip \
-    wget \
- && pip install --trusted-host pypi.python.org \
-    docker-compose \
- && wget https://github.com/geofffranks/spruce/releases/download/v1.12.1/spruce-linux-amd64 \
- && chmod +x spruce-linux-amd64 && mv spruce-linux-amd64 /usr/local/bin/spruce \
- && rm -r ~/.cache/pip \
- && apk del build-deps
+   && apk add --no-cache \
+   python3 \
+   py3-pip \
+   bash \
+   curl \
+   git \
+   && apk add --no-cache --virtual build-deps \
+   python3-dev \
+   libffi-dev \
+   openssl-dev \
+   gcc \
+   libc-dev \
+   make \
+   && pip3 install --trusted-host pypi.python.org \
+   docker-compose \
+   && rm -r ~/.cache/pip \
+   && apk del build-deps
